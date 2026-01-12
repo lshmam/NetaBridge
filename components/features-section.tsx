@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { Search, Users, Check, ChevronDown } from "lucide-react"
+import { BlurReveal } from "@/components/BlurReveal"
 
 const people = [
   { name: "Thomas Hamill", initials: "TH", position: "Head of Battery Systems", company: "Rivian", strength: "strong" },
@@ -18,11 +19,15 @@ export function FeaturesSection() {
         <div className="mx-auto max-w-6xl">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6 text-balance">Get precise results</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-              The search results are evaluated by AI for the best fit, so you instantly know who to approach and how
-              you're connected.
-            </p>
+            <BlurReveal delay={0.1}>
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6 text-balance">Get precise results</h2>
+            </BlurReveal>
+            <BlurReveal delay={0.2}>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+                The search results are evaluated by AI for the best fit, so you instantly know who to approach and how
+                you're connected.
+              </p>
+            </BlurReveal>
           </div>
 
           {/* Toggle Buttons */}
@@ -82,12 +87,12 @@ export function FeaturesSection() {
                       <div
                         key={i}
                         className={`w-3 h-3 rounded-full ${person.strength === "strong"
-                            ? "bg-emerald-500"
-                            : person.strength === "medium" && i <= 2
-                              ? "bg-amber-500"
-                              : person.strength === "weak" && i === 1
-                                ? "bg-gray-400"
-                                : "bg-gray-200"
+                          ? "bg-emerald-500"
+                          : person.strength === "medium" && i <= 2
+                            ? "bg-amber-500"
+                            : person.strength === "weak" && i === 1
+                              ? "bg-gray-400"
+                              : "bg-gray-200"
                           }`}
                       />
                     ))}

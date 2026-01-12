@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { TrendingUp, ArrowUp, ArrowDown, Building2, Users, Clock } from "lucide-react"
 import { ParticlesBackground } from "@/components/particles-background"
+import { BlurReveal } from "@/components/BlurReveal"
 
 const leaderboardData = [
     {
@@ -88,15 +89,21 @@ export function NetworkDashboard() {
                     <div className="mx-auto max-w-7xl">
                         {/* Header */}
                         <div className="text-center mb-16">
-                            <Badge variant="outline" className="mb-4 border-white/20 text-white/80 bg-white/5">
-                                Network Intelligence
-                            </Badge>
-                            <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6 text-white">
-                                Track Network Performance like a Stock Market
-                            </h2>
-                            <p className="text-lg text-white/70 max-w-2xl mx-auto">
-                                See the most connected, deal-closing, and trusted networks. Raise your rank to create more opportunities.
-                            </p>
+                            <BlurReveal delay={0.1}>
+                                <Badge variant="outline" className="mb-4 border-white/20 text-white/80 bg-white/5">
+                                    Network Intelligence
+                                </Badge>
+                            </BlurReveal>
+                            <BlurReveal delay={0.2}>
+                                <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6 text-white">
+                                    Track Network Performance like a Stock Market
+                                </h2>
+                            </BlurReveal>
+                            <BlurReveal delay={0.3}>
+                                <p className="text-lg text-white/70 max-w-2xl mx-auto">
+                                    See the most connected, deal-closing, and trusted networks. Raise your rank to create more opportunities.
+                                </p>
+                            </BlurReveal>
                         </div>
 
                         <div className="grid gap-6 lg:grid-cols-12">
