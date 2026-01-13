@@ -19,7 +19,7 @@ export function HeroSection() {
         <div className="mx-auto max-w-4xl text-center">
           <BlurReveal delay={0.2}>
             <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-medium tracking-tight text-white mb-6 whitespace-normal md:whitespace-nowrap">
-              Unlock your deal here
+              Unlock your next deal here
             </h1>
           </BlurReveal>
 
