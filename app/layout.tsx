@@ -4,30 +4,9 @@ import localFont from "next/font/local"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
-const neueMontreal = localFont({
-  src: [
-    {
-      path: "../public/neue-montreal-free-demo-pangram-pangram-030418/NeueMontreal-Light.otf",
-      weight: "300",
-      style: "normal",
-    },
-    {
-      path: "../public/neue-montreal-free-demo-pangram-pangram-030418/NeueMontreal-Regular.otf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../public/neue-montreal-free-demo-pangram-pangram-030418/NeueMontreal-Medium.otf",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "../public/neue-montreal-free-demo-pangram-pangram-030418/NeueMontreal-Bold.otf",
-      weight: "700",
-      style: "normal",
-    },
-  ],
-  variable: "--font-neue-montreal",
+const sfPro = localFont({
+  src: "../public/SF-Pro.ttf",
+  variable: "--font-sf-pro",
 })
 
 const britannica = localFont({
@@ -67,7 +46,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${neueMontreal.variable} ${britannica.variable} font-sans antialiased overflow-x-hidden`}>
+      <body className={`${sfPro.variable} ${britannica.variable} font-sans antialiased overflow-x-hidden`}>
         {children}
         <Analytics />
       </body>

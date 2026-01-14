@@ -6,6 +6,9 @@ import { CTASection } from "@/components/cta-section"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { BentoGrid } from "@/components/bento-grid"
+import { DemandSupplyMatch } from "@/components/demand-supply-match"
+import { NetworkSearch } from "@/components/network-search"
+import { DealManagement } from "@/components/deal-management"
 
 export default function Home() {
   return (
@@ -13,13 +16,17 @@ export default function Home() {
       <Header />
       <main>
         <HeroSection />
-        <FeaturesSection />
-        <BentoGrid />
-        {/* <NetworkDashboard /> */}
         <IntegrationsSection />
+        <FeaturesSection />
+        <DealManagement />
+        {/* <NetworkSearch /> */}
+        {/* <DemandSupplyMatch /> */}
+        {/* <BentoGrid /> */}
+        {/* <NetworkDashboard /> */}
         <CTASection />
       </main>
       <Footer />
     </div>
   )
 }
+

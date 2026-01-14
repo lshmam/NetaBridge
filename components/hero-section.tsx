@@ -1,52 +1,55 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { ArrowRight } from "lucide-react"
-import { ParticlesBackground } from "@/components/particles-background"
+import { Sparkles } from "lucide-react"
 import { BlurReveal } from "@/components/BlurReveal"
-import { BorderBeam } from "@/components/ui/border-beam"
+import Glow from "@/components/ui/glow"
+import { NetworkSearchInput } from "@/components/network-search-input"
+import { ParticlesBackground } from "@/components/ui/particles-background"
 
 export function HeroSection() {
-
   return (
-    <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden px-4 pt-4 pb-4 md:px-16 md:pt-32 md:pb-12">
-      {/* Background with gradient and particles */}
-      <div className="absolute inset-4 md:inset-8 lg:inset-12 bg-gradient-to-br from-[#0a0f1a] via-[#0d1526] to-[#0a0f1a] rounded-[2rem] md:rounded-[3rem] overflow-hidden">
-        <ParticlesBackground />
-      </div>
+    <section className="py-2 px-2 md:py-4 md:px-4">
+      <div className="relative min-h-[95vh] rounded-[2rem] md:rounded-[3rem] flex items-center justify-center bg-[#0a0a0a] overflow-hidden">
+        {/* Network Particles Background */}
+        <ParticlesBackground id="tsparticles-hero" />
 
-      <div className="relative z-10 w-full px-4 md:px-16 lg:px-32 xl:px-48 py-12">
-        <div className="mx-auto max-w-4xl text-center">
+        {/* Subtle dot pattern background */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.05)_1px,transparent_0)] [background-size:40px_40px]" />
+
+        {/* Glow effect */}
+        <Glow variant="above" />
+
+        <div className="relative z-10 w-full max-w-4xl text-center px-4">
+          {/* Badge */}
+          <BlurReveal delay={0.1}>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white/70 text-sm mb-8">
+              <Sparkles className="w-4 h-4" />
+              <span>Trusted supply & demand match platform</span>
+            </div>
+          </BlurReveal>
+
+          {/* Main Headline */}
           <BlurReveal delay={0.2}>
-            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-medium tracking-tight text-white mb-6 whitespace-normal md:whitespace-nowrap">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight text-white mb-6">
               Unlock your next deal here
             </h1>
           </BlurReveal>
 
-          <BlurReveal delay={0.4}>
-            <p className="text-lg md:text-xl text-white/60 mb-12 max-w-2xl mx-auto">
-              Trusted supply & demand match platform
+          {/* Subtitle */}
+          <BlurReveal delay={0.3}>
+            <p className="text-lg md:text-xl text-white/60 mb-10 max-w-2xl mx-auto leading-relaxed">
+              The AI-powered supply chain network that turns connections into contracts
             </p>
           </BlurReveal>
 
-          {/* Action Buttons */}
-          <BlurReveal delay={0.6}>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              {/* Wrapper for BorderBeam effect */}
-              <div className="relative overflow-hidden rounded-full w-full sm:w-auto">
-                <Button size="lg" className="relative rounded-full bg-white text-black hover:bg-white/90 px-8 py-6 text-lg w-full">
-                  Post a Supply
-                </Button>
-                <BorderBeam size={200} duration={4} className="from-transparent via-blue-500 to-transparent" />
-              </div>
-              <Button size="lg" variant="outline" className="rounded-full border-white/20 bg-white/5 text-white hover:bg-white/10 hover:text-white px-8 py-6 text-lg w-full sm:w-auto">
-                Post a Demand
-              </Button>
-            </div>
-            {/* <p className="text-sm text-white/50 mt-6">Join the waitlist for early access</p> */}
+          {/* Network Search Component */}
+          <BlurReveal delay={0.4}>
+            <NetworkSearchInput />
           </BlurReveal>
         </div>
+
+        {/* Bottom fade to seamlessly blend with the next section */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0a0a0a] to-transparent pointer-events-none z-20" />
       </div>
     </section>
   )
