@@ -1,6 +1,6 @@
 "use client"
 
-import { Mail, Calendar, MessageCircle, Book, CalendarDays } from "lucide-react"
+import { Mail, Calendar, MessageCircle, Book, CalendarDays, Brain } from "lucide-react"
 import { BlurReveal } from "@/components/BlurReveal"
 import { BentoGrid } from "@/components/bento-grid"
 import { Button } from "@/components/ui/button"
@@ -24,12 +24,9 @@ export function IntegrationsSection() {
             {/* Left Side - Text */}
             <div>
               <BlurReveal delay={0.1}>
-                <div className="flex items-center gap-2 text-white/50 mb-6">
-                  <Mail className="w-4 h-4" />
-                  <span>+</span>
-                  <Calendar className="w-4 h-4" />
-                  <span>+</span>
-                  <MessageCircle className="w-4 h-4" />
+                <div className="inline-flex text-left items-center gap-2 px-4 py-2 rounded-full bg-purple-500/20 text-purple-300 text-sm mb-6 border border-purple-500/20">
+                  <Brain className="w-4 h-4" />
+                  <span>Network Intelligence</span>
                 </div>
               </BlurReveal>
               <BlurReveal delay={0.2}>

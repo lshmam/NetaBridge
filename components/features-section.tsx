@@ -27,6 +27,10 @@ export function FeaturesSection() {
           {/* Header */}
           <div className="text-left mb-12 md:mb-16 w-full max-w-full">
             <BlurReveal delay={0.1}>
+              <div className="inline-flex text-left items-center gap-2 px-4 py-2 rounded-full bg-blue-500/20 text-blue-300 text-sm mb-6 border border-blue-500/20">
+                <Search className="w-4 h-4" />
+                <span>AI Outreach</span>
+              </div>
               <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6 text-left text-white break-words">2. Get connected to the right people</h2>
             </BlurReveal>
             <BlurReveal delay={0.2}>

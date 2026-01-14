@@ -8,7 +8,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-2">
             {/* <Network className="h-5 w-5 text-primary" /> */}
-            <span className="font-semibold">NetaBridge</span>
+            <span className="font-semibold text-xl" style={{ fontFamily: 'Britannica, serif' }}>NetaBridge</span>
           </div>
 
           <nav className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">

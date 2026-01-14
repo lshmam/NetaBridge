@@ -136,6 +136,18 @@
       transform: translate(-50%, -50%) scale(0.9);
     }
   }
+
+  --animate-border-beam: border-beam calc(var(--duration)*1s) infinite linear;
+
+  @keyframes border-beam {
+    0% {
+      offset-distance: 0%;
+    }
+
+    100% {
+      offset-distance: 100%;
+    }
+  }
 }
 
 @layer base {
