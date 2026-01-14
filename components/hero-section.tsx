@@ -6,6 +6,8 @@ import Glow from "@/components/ui/glow"
 import { NetworkSearchInput } from "@/components/network-search-input"
 import { ParticlesBackground } from "@/components/ui/particles-background"
 
+import { motion } from "framer-motion"
+
 export function HeroSection() {
   return (
     <section className="py-2 px-2 md:py-4 md:px-4">
@@ -16,8 +18,15 @@ export function HeroSection() {
         {/* Subtle dot pattern background */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.05)_1px,transparent_0)] [background-size:40px_40px]" />
 
-        {/* Glow effect */}
-        <Glow variant="above" />
+        {/* Glow effect with delayed entry */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.8, duration: 1.5 }}
+          className="absolute inset-0 pointer-events-none"
+        >
+          <Glow variant="above" />
+        </motion.div>
 
         <div className="relative z-10 w-full max-w-4xl text-center px-4">
           {/* Badge */}

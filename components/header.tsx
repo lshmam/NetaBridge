@@ -3,12 +3,11 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { Menu } from "lucide-react"
 
 export function Header() {
   const [isDark, setIsDark] = useState(false)
-  const [open, setOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,40 +45,26 @@ export function Header() {
         </div>
 
         {/* Mobile - Hamburger Menu */}
-        <Sheet open={open} onOpenChange={setOpen}>
-          <SheetTrigger asChild className="md:hidden">
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild className="md:hidden">
             <Button variant="ghost" size="icon" className="text-white hover:text-white hover:bg-white/10">
               <Menu className="h-6 w-6" />
               <span className="sr-only">Toggle menu</span>
             </Button>
-          </SheetTrigger>
-          <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-            <nav className="flex flex-col gap-4 mt-8">
-              <Link
-                href="#features"
-                className="text-lg font-medium hover:text-primary transition-colors"
-                onClick={() => setOpen(false)}
-              >
-                Features
-              </Link>
-              <Link
-                href="#integrations"
-                className="text-lg font-medium hover:text-primary transition-colors"
-                onClick={() => setOpen(false)}
-              >
-                Integrations
-              </Link>
-              <div className="flex flex-col gap-3 mt-6 pt-6 border-t">
-                <Button variant="outline" className="w-full">
-                  Log In
-                </Button>
-                <Button className="w-full">
-                  Sign Up
-                </Button>
-              </div>
-            </nav>
-          </SheetContent>
-        </Sheet>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end" className="w-[200px] bg-[#0a0a0a] border-white/10 text-white">
+            <DropdownMenuItem className="focus:bg-white/10 focus:text-white cursor-pointer rounded-xl" asChild>
+              <Button variant="outline" className="w-full border-white/20 text-white hover:bg-white/10 hover:text-white bg-transparent h-10 justify-center mb-2">
+                Log In
+              </Button>
+            </DropdownMenuItem>
+            <DropdownMenuItem className="focus:bg-white/10 focus:text-white cursor-pointer rounded-xl" asChild>
+              <Button className="w-full bg-white text-black hover:bg-white/90 h-10 justify-center">
+                Sign Up
+              </Button>
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </div>
     </header>
   )
