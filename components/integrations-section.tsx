@@ -41,14 +41,14 @@ export function IntegrationsSection() {
               </BlurReveal>
               <BlurReveal delay={0.4}>
                 <div className="flex items-center gap-4">
-                  <Button className="rounded-full bg-white text-black hover:bg-white/90 gap-2">
+                  {/* <Button className="rounded-full bg-white text-black hover:bg-white/90 gap-2">
                     <Book className="w-4 h-4" />
                     API Docs
                   </Button>
                   <Button variant="outline" className="rounded-full gap-2 border-white/20 text-white hover:bg-white/10">
                     <CalendarDays className="w-4 h-4" />
                     Book a Call
-                  </Button>
+                  </Button> */}
                 </div>
               </BlurReveal>
             </div>

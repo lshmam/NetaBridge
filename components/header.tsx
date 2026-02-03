@@ -33,7 +33,7 @@ export function Header() {
         </Link>
 
         {/* Desktop - Auth Buttons */}
-        <div className="hidden md:flex rounded-full border border-white/10 bg-white/5 backdrop-blur-xl shadow-2xl">
+        {/* <div className="hidden md:flex rounded-full border border-white/10 bg-white/5 backdrop-blur-xl shadow-2xl">
           <div className="flex h-12 items-center gap-3 px-6">
             <Button variant="ghost" size="sm" className="text-white hover:text-white hover:bg-white/10">
               Log In
@@ -42,7 +42,7 @@ export function Header() {
               Sign Up
             </Button>
           </div>
-        </div>
+        </div> */}
 
         {/* Mobile - Hamburger Menu */}
         <DropdownMenu>
@@ -53,7 +53,7 @@ export function Header() {
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end" className="w-[200px] bg-[#0a0a0a] border-white/10 text-white">
-            <DropdownMenuItem className="focus:bg-white/10 focus:text-white cursor-pointer rounded-xl" asChild>
+            {/* <DropdownMenuItem className="focus:bg-white/10 focus:text-white cursor-pointer rounded-xl" asChild>
               <Button variant="outline" className="w-full border-white/20 text-white hover:bg-white/10 hover:text-white bg-transparent h-10 justify-center mb-2">
                 Log In
               </Button>
@@ -62,7 +62,7 @@ export function Header() {
               <Button className="w-full bg-white text-black hover:bg-white/90 h-10 justify-center">
                 Sign Up
               </Button>
-            </DropdownMenuItem>
+            </DropdownMenuItem> */}
           </DropdownMenuContent>
         </DropdownMenu>
       </div>

@@ -3,7 +3,7 @@
 import { Sparkles } from "lucide-react"
 import { BlurReveal } from "@/components/BlurReveal"
 import Glow from "@/components/ui/glow"
-import { NetworkSearchInput } from "@/components/network-search-input"
+import { WaitlistInput } from "@/components/waitlist-input"
 import { ParticlesBackground } from "@/components/ui/particles-background"
 
 import { motion } from "framer-motion"
@@ -51,9 +51,9 @@ export function HeroSection() {
             </p>
           </BlurReveal>
 
-          {/* Network Search Component */}
+          {/* Waitlist Input Component */}
           <BlurReveal delay={0.4}>
-            <NetworkSearchInput />
+            <WaitlistInput />
           </BlurReveal>
         </div>
 

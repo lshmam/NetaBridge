@@ -1,9 +1,8 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
 import { BlurReveal } from "@/components/BlurReveal"
-import { BorderBeam } from "@/components/ui/border-beam"
 import { ParticlesBackground } from "@/components/ui/particles-background"
+import { WaitlistInput } from "@/components/waitlist-input"
 
 import Glow from "@/components/ui/glow"
 
@@ -25,22 +24,16 @@ export function CTASection() {
         <div className="relative z-10 mx-auto max-w-2xl text-center">
           <BlurReveal delay={0.1}>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6 text-balance text-white">
-              Research-backed. AI-powered.
+              Get Early Access
             </h2>
           </BlurReveal>
           <BlurReveal delay={0.2}>
             <p className="text-lg text-white/60 mb-10 text-pretty leading-relaxed">
-              Backed by decades of network science research from Harvard, Stanford, and MIT. Start utilizing your network today.
+              Backed by decades of network science research from Harvard, Stanford, and MIT. Secure your spot on the waitlist today.
             </p>
           </BlurReveal>
           <BlurReveal delay={0.3}>
-            {/* Wrapper for BorderBeam effect */}
-            <div className="relative overflow-hidden rounded-full inline-block">
-              <Button size="lg" className="relative rounded-full px-10 py-6 text-lg bg-white text-black hover:bg-white/90">
-                Activate Your Network
-              </Button>
-              <BorderBeam size={200} duration={4} className="from-transparent via-purple-500 to-transparent" />
-            </div>
+            <WaitlistInput />
           </BlurReveal>
           <p className="text-sm text-white/40 mt-6">No credit card required. Free forever.</p>
         </div>
